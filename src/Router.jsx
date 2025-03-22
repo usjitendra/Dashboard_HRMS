@@ -14,12 +14,14 @@ import {
   Geography,
   Calendar,
   Stream,
+  Login,
 } from "./scenes";
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
+        
         <Route path="/" element={<App />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/team" element={<Team />} />
@@ -33,7 +35,13 @@ const AppRouter = () => {
           <Route path="/line" element={<Line />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/geography" element={<Geography />} />
+
+
+
+         {/* Login */}
+          
         </Route>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </Router>
   );
