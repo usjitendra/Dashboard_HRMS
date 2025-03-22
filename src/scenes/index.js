@@ -13,6 +13,7 @@ import Stream from "./stream";
 import FAQ from "./faq";
 import Geography from "./geography";
 import Login from "../components/Login";
+import EmployeeAdd from "../components/EmployeeAdd";
 
 export {
   Navbar,
@@ -30,4 +31,5 @@ export {
   FAQ,
   Geography,
   Login,
+  EmployeeAdd,
 };

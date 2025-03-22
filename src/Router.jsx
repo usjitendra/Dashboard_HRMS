@@ -15,6 +15,7 @@ import {
   Calendar,
   Stream,
   Login,
+  EmployeeAdd,
 } from "./scenes";
 
 const AppRouter = () => {
@@ -34,9 +35,8 @@ const AppRouter = () => {
           <Route path="/stream" element={<Stream />} />
           <Route path="/line" element={<Line />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/geography" element={<Geography />} />
-
-
+          <Route path="/geography" element={<Geography />}/>
+          <Route path="/employee" element={<EmployeeAdd/>}/>
 
          {/* Login */}
           

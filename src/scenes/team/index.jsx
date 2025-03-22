@@ -3,6 +3,7 @@ import { Header } from "../../components";
 import { DataGrid } from "@mui/x-data-grid";
 import { mockDataTeam } from "../../data/mockData";
 import { tokens } from "../../theme";
+import { useNavigate } from "react-router";
 import {
   AdminPanelSettingsOutlined,
   LockOpenOutlined,
@@ -10,6 +11,7 @@ import {
 } from "@mui/icons-material";
 
 const Team = () => {
+  const navigate=useNavigate();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -59,9 +61,16 @@ const Team = () => {
       },
     },
   ];
+       const addEmployee=()=>{
+        navigate("/employee")
+       }
+
   return (
     <Box m="20px">
       <Header title="TEAM" subtitle="Managing the Team Members" />
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"onClick={addEmployee}>
+        Add empoloy
+      </button>
       <Box
         mt="40px"
         height="75vh"
