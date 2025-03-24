@@ -11,11 +11,17 @@ import {
 } from "@mui/icons-material";
 import { useEffect } from "react";
 import axios from "axios";
+import { useGetAllEmployeeQuery } from "../../rtk/employeeApi";
 
 const Team = () => {
   const navigate=useNavigate();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  const {data,loading}=useGetAllEmployeeQuery()
+
+  console.log(data);
+  
 
   const columns = [
     { field: "id", headerName: "ID" },
