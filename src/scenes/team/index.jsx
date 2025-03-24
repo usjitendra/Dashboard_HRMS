@@ -9,6 +9,8 @@ import {
   LockOpenOutlined,
   SecurityOutlined,
 } from "@mui/icons-material";
+import { useEffect } from "react";
+import axios from "axios";
 
 const Team = () => {
   const navigate=useNavigate();
@@ -64,6 +66,22 @@ const Team = () => {
        const addEmployee=()=>{
         navigate("/employee")
        }
+
+       const employeeData_fetch = async () => {
+        try {
+          const result = await axios.get(`http://localhost:6002/api/all/employee`);
+          console.log("Fetched Data:", result); 
+          return result; 
+        } catch (err) {
+          console.error("Error fetching employee data:", err.message);
+          return null;
+        }
+      };
+
+      useEffect(()=>{
+          employeeData_fetch()
+      },[])
+      
 
   return (
     <Box m="20px">
