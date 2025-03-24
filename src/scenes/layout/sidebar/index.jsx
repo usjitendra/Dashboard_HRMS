@@ -65,10 +65,10 @@ const SideBar = () => {
                 gap="12px"
                 sx={{ transition: ".3s ease" }}
               >
-                <img
-                  style={{ width: "30px", height: "30px", borderRadius: "8px" }}
+                <img className="w-60 h-60r-2 object-contain"
+                  // style={{ width: "30px", height: "30px", borderRadius: "8px" }}
                   src={logo}
-                  alt="Argon"
+                  // alt="Argon"
                 />
                 <Typography
                   variant="h4"
@@ -76,7 +76,7 @@ const SideBar = () => {
                   textTransform="capitalize"
                   color={colors.greenAccent[500]}
                 >
-                  Argon
+                  {/* Argon */}
                 </Typography>
               </Box>
             )}
@@ -103,7 +103,7 @@ const SideBar = () => {
           />
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="h3" fontWeight="bold" color={colors.gray[100]}>
-              Tony Stark
+              Code Crafter
             </Typography>
             <Typography
               variant="h6"
@@ -159,18 +159,18 @@ const SideBar = () => {
             colors={colors}
             icon={<PeopleAltOutlined />}
           />
-          <Item
+          {/* <Item
             title="Contacts Information"
             path="/contacts"
             colors={colors}
             icon={<ContactsOutlined />}
-          />
-          <Item
+          /> */}
+          {/* <Item
             title="Invoices Balances"
             path="/invoices"
             colors={colors}
             icon={<ReceiptOutlined />}
-          />
+          /> */}
         </Menu>
         <Typography
           variant="h6"
@@ -190,24 +190,24 @@ const SideBar = () => {
             },
           }}
         >
-          <Item
+          {/* <Item
             title="Profile Form"
             path="/form"
             colors={colors}
             icon={<PersonOutlined />}
-          />
-          <Item
+          /> */}
+          {/* <Item
             title="Calendar"
             path="/calendar"
             colors={colors}
             icon={<CalendarTodayOutlined />}
-          />
-          <Item
+          /> */}
+          {/* <Item
             title="FAQ Page"
             path="/faq"
             colors={colors}
             icon={<HelpOutlineOutlined />}
-          />
+          /> */}
         </Menu>
         <Typography
           variant="h6"
@@ -227,36 +227,36 @@ const SideBar = () => {
             },
           }}
         >
-          <Item
+          {/* <Item
             title="Bar Chart"
             path="/bar"
             colors={colors}
             icon={<BarChartOutlined />}
-          />
-          <Item
+          /> */}
+          {/* <Item
             title="Pie Chart"
             path="/pie"
             colors={colors}
             icon={<DonutLargeOutlined />}
-          />
-          <Item
+          /> */}
+          {/* <Item
             title="Line Chart"
             path="/line"
             colors={colors}
             icon={<TimelineOutlined />}
-          />
-          <Item
+          /> */}
+          {/* <Item
             title="Geography Chart"
             path="/geography"
             colors={colors}
             icon={<MapOutlined />}
-          />
-          <Item
+          /> */}
+          {/* <Item
             title="Stream Chart"
             path="/stream"
             colors={colors}
             icon={<WavesOutlined />}
-          />
+          /> */}
         </Menu>
       </Box>
     </Sidebar>

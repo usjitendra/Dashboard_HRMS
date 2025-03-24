@@ -37,7 +37,6 @@ const axiosBaseQuery = async ({ url, method, data }) => {
         
         const errorMessage = error.response?.data?.message || error.message || "Something went wrong";
         toast.error(errorMessage); 
-
         return {
             error: {
                 status: error.response?.status || 500, 

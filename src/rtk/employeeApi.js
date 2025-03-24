@@ -4,7 +4,7 @@ import axiosBaseQuery from "./axiosBaseQuery";
 export const employeeDetailApi = createApi({
     reducerPath: "authApi",
     baseQuery: axiosBaseQuery,
-    tagTypes: ["employee"], // ✅ Ensure it matches invalidatesTags
+    tagTypes: ["employee"], 
 
     endpoints: (builder) => ({
         getAllEmployee: builder.query({
@@ -15,48 +15,17 @@ export const employeeDetailApi = createApi({
             providesTags: ["employee"], 
         }), 
 
+        addEmployee:builder.mutation({
+            query:(formData)=>({
+                url:"employee/employee/registration",
+                method:"POST",
+                data:formData,
 
-        addTeam: builder.mutation({
-            query: (formData) => {
-                return {
-                    url: "/doctor",
-                    method: "POST",
-                    data: formData, // ✅ Change from `body` to `data`
-                    formData: true, // ✅ Ensure FormData is properly handled
-                };
-            },
-            invalidatesTags: ["team"],
-        }),
-        
-        
-        
-
-        // ✅ EDIT Test (PUT)
-        editTeam: builder.mutation({
-            query: ({ id, formData }) => ({
-                url: `/doctor/${id}`,
-                method: "PUT",
-                data: formData, // ✅ Change from `body` to `data`
-                formData: true, // ✅ Ensure FormData is properly handled
             }),
-            invalidatesTags: ["team"], // ✅ Cache Refresh
+            invalidatesTags:["employee"],
         }),
-
-        // ✅ DELETE Banner (DELETE)
-        deleteDoctor: builder.mutation({
-            query: (id) => ({
-                url: `/doctor/${id}`,
-                method: "DELETE",
-            }),
-            invalidatesTags: ["team"], // ✅ Cache Refresh
-        }),
-
-
-
+    
     }),
 });
 
-export const {
-    useGetAllEmployeeQuery
-
-} = employeeDetailApi;
+export const {useGetAllEmployeeQuery,useAddEmployeeMutation} = employeeDetailApi;
