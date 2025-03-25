@@ -17,16 +17,18 @@ import {
   Login,
   EmployeeAdd,
 } from "./scenes";
+import AuthContent from "./auth/AuthContent";
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        
-        <Route path="/" element={<App />}>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/team" element={<Team />} />
-          {/* <Route path="/contacts" element={<Contacts />} />
+        <Route path="/login" element={<Login />} />
+        <Route element={<AuthContent/>}>
+          <Route path="/" element={<App />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/team" element={<Team />} />
+            {/* <Route path="/contacts" element={<Contacts />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/form" element={<Form />} />
           <Route path="/calendar" element={<Calendar />} />
@@ -38,10 +40,9 @@ const AppRouter = () => {
           <Route path="/geography" element={<Geography />}/>
           
           {/* Login */}
-          <Route path="/employee" element={<EmployeeAdd/>}/> 
-          
+            <Route path="/employee" element={<EmployeeAdd />} />
+          </Route>
         </Route>
-        <Route path="/login" element={<Login/>}/>
       </Routes>
     </Router>
   );

@@ -2,7 +2,7 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 import axiosBaseQuery from "./axiosBaseQuery";
 
 export const employeeDetailApi = createApi({
-    reducerPath: "authApi",
+    reducerPath: "employee",
     baseQuery: axiosBaseQuery,
     tagTypes: ["employee"], 
 

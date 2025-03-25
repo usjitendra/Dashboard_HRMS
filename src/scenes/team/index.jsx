@@ -5,6 +5,7 @@ import { tokens } from "../../theme";
 import { useNavigate } from "react-router";
 import { useGetAllEmployeeQuery } from "../../rtk/employeeApi";
 
+
 const Team = () => {
   const navigate = useNavigate();
   const theme = useTheme();
@@ -33,7 +34,7 @@ const Team = () => {
       <Header title="TEAM" subtitle="Managing the Team Members" />
       <div className="flex justify-end pr-10">
       <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+        class="bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 border border-blue-700 rounded"
         onClick={addEmployee}
       >
         Add employee

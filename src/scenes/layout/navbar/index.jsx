@@ -4,6 +4,8 @@ import {
   InputBase,
   useMediaQuery,
   useTheme,
+  Menu,
+  MenuItem
 } from "@mui/material";
 import { tokens, ColorModeContext } from "../../../theme";
 import { useContext } from "react";
@@ -17,13 +19,41 @@ import {
   SettingsOutlined,
 } from "@mui/icons-material";
 import { ToggledContext } from "../../../App";
+import {useState} from 'react';
+import { useNavigate } from "react-router-dom";
+import { useIsLogoutMutation } from "../../../rtk/login";
+
+
+
 const Navbar = () => {
+  const navigate=useNavigate();
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
   const { toggled, setToggled } = useContext(ToggledContext);
   const isMdDevices = useMediaQuery("(max-width:768px)");
   const isXsDevices = useMediaQuery("(max-width:466px)");
   const colors = tokens(theme.palette.mode);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const[logoutUser]=useIsLogoutMutation();
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handelLogout = async() => {
+          const result=await logoutUser().unwrap()
+         console.log("logout user",result);
+         localStorage.removeItem("authToken");
+         
+         console.log("Logout Click++==++",result)
+         navigate("/login");
+
+  };
   return (
     <Box
       display="flex"
@@ -66,9 +96,18 @@ const Navbar = () => {
         <IconButton>
           <SettingsOutlined />
         </IconButton>
-        <IconButton>
+        <IconButton onClick={handleMenuOpen}>
           <PersonOutlined />
         </IconButton>
+        <Menu
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleMenuClose}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          transformOrigin={{ vertical: "top", horizontal: "right" }}
+        >
+          <MenuItem onClick={handelLogout}>Logout</MenuItem>
+        </Menu>
       </Box>
     </Box>
   );
