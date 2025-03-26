@@ -14,7 +14,8 @@ import FAQ from "./faq";
 import Geography from "./geography";
 import Login from "../components/Login";
 import EmployeeAdd from "../components/EmployeeAdd";
-
+import TableComponent from "../helper/Tablecomponent";
+import TableData from "../scenes/team/Usetable"
 export {
   Navbar,
   SideBar,
@@ -32,4 +33,6 @@ export {
   Geography,
   Login,
   EmployeeAdd,
+  TableComponent,
+  TableData
 };

@@ -48,7 +48,7 @@ const Navbar = () => {
   const handelLogout = async() => {
           const result=await logoutUser().unwrap()
          console.log("logout user",result);
-         localStorage.removeItem("authToken");
+        await localStorage.removeItem("authToken");
          
          console.log("Logout Click++==++",result)
          navigate("/login");
@@ -99,7 +99,7 @@ const Navbar = () => {
         <IconButton onClick={handleMenuOpen}>
           <PersonOutlined />
         </IconButton>
-        <Menu
+        <Menu className=""
           anchorEl={anchorEl}
           open={open}
           onClose={handleMenuClose}

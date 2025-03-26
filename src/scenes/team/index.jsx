@@ -5,7 +5,6 @@ import { tokens } from "../../theme";
 import { useNavigate } from "react-router";
 import { useGetAllEmployeeQuery } from "../../rtk/employeeApi";
 
-
 const Team = () => {
   const navigate = useNavigate();
   const theme = useTheme();

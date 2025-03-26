@@ -9,7 +9,7 @@ export const logiDetail = createApi({
     endpoints: (builder) => ({
         loginApi: builder.mutation({
             query: (data) => ({
-                url: "/employee/login",
+                url: "/admin/login",
                 method: "POST",
                 data,
                 credentials: "include",
@@ -20,7 +20,7 @@ export const logiDetail = createApi({
 
         isLogin: builder.query({
             query: () => ({
-                url: "/employee/isLogin",
+                url: "/admin/isLogin",
                 method: "GET",
                 credentials: "include",
             }),
@@ -28,7 +28,7 @@ export const logiDetail = createApi({
         }),
         isLogout:builder.mutation({
             query:()=>({
-                url:"/employee/logout",
+                url:"/admin/logout",
                 method:"POST",
                 credentials:"include",
             })  

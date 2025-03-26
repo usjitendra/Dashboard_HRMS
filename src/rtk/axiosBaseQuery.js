@@ -6,15 +6,12 @@ export const axiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
-  withCredentials: true, // ✅ Cookies allow karega
+  withCredentials: true, 
 });
-
 
 
 const axiosBaseQuery = async ({ url, method, data }) => {
   try {
-    // console.log("Request Data:", data); // ✅ Debugging
-
     const response = await axiosInstance({
       url,
       method,
@@ -22,7 +19,7 @@ const axiosBaseQuery = async ({ url, method, data }) => {
         ? { data, headers: { "Content-Type": "multipart/form-data" } } 
         : { data }),
     });
-    console.log(response);
+    // console.log(response);
 
     if (response?.data?.message) {
       toast.success(response.data.message);

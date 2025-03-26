@@ -9,7 +9,7 @@ export const employeeDetailApi = createApi({
     endpoints: (builder) => ({
         getAllEmployee: builder.query({
             query: () => ({
-                url: "/employee/all/employee",
+                url: "/employee/all",
                 method: "GET",
             }),
             providesTags: ["employee"], 
@@ -17,15 +17,30 @@ export const employeeDetailApi = createApi({
 
         addEmployee:builder.mutation({
             query:(formData)=>({
-                url:"employee/employee/registration",
+                url:"employee/registration",
                 method:"POST",
                 data:formData,
 
             }),
             invalidatesTags:["employee"],
         }),
-    
+        deleteEmployee:builder.mutation({
+            query:(id)=>({
+               url:`employee/delete/${id}`,
+               method:"DELETE",
+            }),
+            invalidatesTags:["employee"],
+         }) ,
+          employeeEdit:builder.mutation({
+            query:({id,data})=>({
+                url:`employee/update/${id}`,
+                method:"PUT",
+                data
+            }),
+            invalidatesTags:["employee"],
+        }),
+          
     }),
 });
 
-export const {useGetAllEmployeeQuery,useAddEmployeeMutation} = employeeDetailApi;
+export const {useGetAllEmployeeQuery,useAddEmployeeMutation,useDeleteEmployeeMutation,useEmployeeEditMutation} = employeeDetailApi;

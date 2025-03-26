@@ -16,6 +16,8 @@ import {
   Stream,
   Login,
   EmployeeAdd,
+  // TableComponent,
+  TableData
 } from "./scenes";
 import AuthContent from "./auth/AuthContent";
 
@@ -27,7 +29,7 @@ const AppRouter = () => {
         <Route element={<AuthContent/>}>
           <Route path="/" element={<App />}>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/team" element={<TableData />} />
             {/* <Route path="/contacts" element={<Contacts />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/form" element={<Form />} />
@@ -43,6 +45,9 @@ const AppRouter = () => {
             <Route path="/employee" element={<EmployeeAdd />} />
           </Route>
         </Route>
+       
+      
+
       </Routes>
     </Router>
   );
