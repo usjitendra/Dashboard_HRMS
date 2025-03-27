@@ -8,8 +8,6 @@ export default function AuthContent() {
 
     //  console.log("jitendra+++",data);
 
-
-   
    return data?<Outlet/>:<Navigate to="/login"/>
- 
+
 }

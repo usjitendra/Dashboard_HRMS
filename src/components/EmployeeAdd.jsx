@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 import {
   useAddEmployeeMutation,
   useEmployeeEditMutation,
@@ -38,6 +39,7 @@ const schema = yup.object().shape({
 const EmployeeAdd = () => {
   const location = useLocation();
   const employeeData = location.state?.editEmployee;
+  const navigate=useNavigate();
   //  console.log("this is secon page++",employeeData)
 
   const {
@@ -69,7 +71,9 @@ const EmployeeAdd = () => {
       const id = employeeData._id;
       // console.log(data);
       const result = await employeeEdit({ id, data}).unwrap();
-      console.log(result);
+      if(result.success==true){
+        navigate("/team") 
+      }
     } else {
         const response = await addEmployee(data).unwrap();
         console.log("reeeee++", response);
@@ -83,7 +87,7 @@ const EmployeeAdd = () => {
         className="text-2xl font-bold mb-4 text-center"
         style={{ color: colors.p1[500] }}
       >
-        Add Employee
+       {employeeData? "Edit Employee":"Add Employee"}
       </h2>
       <Header title="DASHBOARD" />
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

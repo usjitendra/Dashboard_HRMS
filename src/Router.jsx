@@ -39,9 +39,7 @@ const AppRouter = () => {
           <Route path="/stream" element={<Stream />} />
           <Route path="/line" element={<Line />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/geography" element={<Geography />}/>
-          
-          {/* Login */}
+          <Route path="/geography" element={<Geography />}/>*/}
             <Route path="/employee" element={<EmployeeAdd />} />
           </Route>
         </Route>

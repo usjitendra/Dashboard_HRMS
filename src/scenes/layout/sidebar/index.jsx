@@ -17,6 +17,8 @@ import {
   ReceiptOutlined,
   TimelineOutlined,
   WavesOutlined,
+  ScheduleOutlined,
+  CheckCircleOutlined,
 } from "@mui/icons-material";
 import avatar from "../../../assets/images/avatar.png";
 import logo from "../../../assets/images/logo.png";
@@ -96,12 +98,12 @@ const SideBar = () => {
             mb: "25px",
           }}
         >
-          <Avatar
+          {/* <Avatar
             alt="avatar"
             src={avatar}
             sx={{ width: "100px", height: "100px" }}
-          />
-          <Box sx={{ textAlign: "center" }}>
+          /> */}
+          {/* <Box sx={{ textAlign: "center" }}>
             <Typography variant="h3" fontWeight="bold" color={colors.gray[100]}>
               Code Crafter
             </Typography>
@@ -112,7 +114,7 @@ const SideBar = () => {
             >
               VP Fancy Admin
             </Typography>
-          </Box>
+          </Box> */}
         </Box>
       )}
 
@@ -154,17 +156,17 @@ const SideBar = () => {
           }}
         >
           <Item
-            title="Manage Team"
+            title="Employee Team"
             path="/team"
             colors={colors}
-            icon={<PeopleAltOutlined />}
+            icon={<PeopleAltOutlined/>}
           />
-          {/* <Item
+          <Item
             title="Contacts Information"
             path="/contacts"
             colors={colors}
-            icon={<ContactsOutlined />}
-          /> */}
+            icon={< ScheduleOutlined/>}
+          />
           {/* <Item
             title="Invoices Balances"
             path="/invoices"

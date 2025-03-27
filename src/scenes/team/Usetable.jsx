@@ -51,9 +51,9 @@ const useTable = () => {
                 <button onClick={() => handleDelete(emp._id)} className="text-red-600 hover:text-red-800">
                     <FaTrash size={18} />
                 </button>
-                <button onClick={() => navigate("/dashboard/employee/detail", { state: emp })} className="text-green-600 hover:text-red-800">
+                {/* <button onClick={() => navigate("/dashboard/employee/detail", { state: emp })} className="text-green-600 hover:text-red-800">
                     <FaEye size={18} />
-                </button>
+                </button> */}
             </div>
         ),
     }));

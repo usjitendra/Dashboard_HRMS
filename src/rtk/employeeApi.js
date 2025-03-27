@@ -17,7 +17,7 @@ export const employeeDetailApi = createApi({
 
         addEmployee:builder.mutation({
             query:(formData)=>({
-                url:"employee/registration",
+                url:"employee/add",
                 method:"POST",
                 data:formData,
 

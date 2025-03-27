@@ -18,7 +18,7 @@ const Login = () => {
     };
     const response = await loginApi(data).unwrap();
     console.log("response+++", response);
-    if (response?.success) {
+    if (response?.success){
       navigate("/");
     }
   };

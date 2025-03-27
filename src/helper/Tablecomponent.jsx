@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { tokens } from "../theme.js";
+import theme from "@material-tailwind/react/theme";
 
 
 const TableComponent = ({ columns, data, title, itemsPerPage = 10 }) => {
@@ -17,6 +18,8 @@ const TableComponent = ({ columns, data, title, itemsPerPage = 10 }) => {
    const onAddEmployee=()=>{
         navigator("/employee")
    }
+
+  //  const color=tokens(theme.palette.mode);
 
   return (
     <div className="w-full p-2  shadow-md bg-white">
@@ -44,11 +47,11 @@ const TableComponent = ({ columns, data, title, itemsPerPage = 10 }) => {
           <tbody>
             {paginatedData.map((row, rowIndex) => (
               <tr key={rowIndex} className="odd:bg-white even:bg-gray-100 hover:bg-gray-200 transition duration-200">
-                <td className="border border-gray-300 p-2 text-center font-semibold">
+                <td className="border border-gray-300 p-2 text-center font-semibold text-black">
                   {(currentPage - 1) * itemsPerPage + rowIndex + 1}
                 </td>
                 {columns.map((col, colIndex) => (
-                  <td key={colIndex} className="border border-gray-300 p-3">
+                  <td key={colIndex} className="border border-gray-300 p-3 text-black">
                     {row[col.accessor]}
                   </td>
                 ))}
