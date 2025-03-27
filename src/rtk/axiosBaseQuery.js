@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   // baseURL: "http://localhost:6002/api/v1",
-  baseURL: "https://hr-management-codecrafter.onrender.com",
+  baseURL: "https://hr-management-codecrafter.onrender.com/api/v1",
   headers: {
     "Content-Type": "application/json",
   },
