@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   // baseURL: "http://localhost:6002/api/v1",
-  baseURL: "https://hrmsdashboard4.netlify.app/login",
+  baseURL: "https://hr-management-codecrafter.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
