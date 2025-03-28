@@ -4,21 +4,10 @@ import { useContext, useState } from "react";
 import { tokens } from "../../../theme";
 import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import {
-  BarChartOutlined,
-  CalendarTodayOutlined,
-  ContactsOutlined,
   DashboardOutlined,
-  DonutLargeOutlined,
-  HelpOutlineOutlined,
-  MapOutlined,
   MenuOutlined,
   PeopleAltOutlined,
-  PersonOutlined,
-  ReceiptOutlined,
-  TimelineOutlined,
-  WavesOutlined,
   ScheduleOutlined,
-  CheckCircleOutlined,
 } from "@mui/icons-material";
 import avatar from "../../../assets/images/avatar.png";
 import logo from "../../../assets/images/logo.png";
@@ -98,23 +87,6 @@ const SideBar = () => {
             mb: "25px",
           }}
         >
-          {/* <Avatar
-            alt="avatar"
-            src={avatar}
-            sx={{ width: "100px", height: "100px" }}
-          /> */}
-          {/* <Box sx={{ textAlign: "center" }}>
-            <Typography variant="h3" fontWeight="bold" color={colors.gray[100]}>
-              Code Crafter
-            </Typography>
-            <Typography
-              variant="h6"
-              fontWeight="500"
-              color={colors.greenAccent[500]}
-            >
-              VP Fancy Admin
-            </Typography>
-          </Box> */}
         </Box>
       )}
 
@@ -162,17 +134,11 @@ const SideBar = () => {
             icon={<PeopleAltOutlined/>}
           />
           <Item
-            title="Contacts Information"
-            path="/contacts"
+            title="Attendence"
+            path="/attendence"
             colors={colors}
             icon={< ScheduleOutlined/>}
           />
-          {/* <Item
-            title="Invoices Balances"
-            path="/invoices"
-            colors={colors}
-            icon={<ReceiptOutlined />}
-          /> */}
         </Menu>
         <Typography
           variant="h6"
@@ -192,24 +158,6 @@ const SideBar = () => {
             },
           }}
         >
-          {/* <Item
-            title="Profile Form"
-            path="/form"
-            colors={colors}
-            icon={<PersonOutlined />}
-          /> */}
-          {/* <Item
-            title="Calendar"
-            path="/calendar"
-            colors={colors}
-            icon={<CalendarTodayOutlined />}
-          /> */}
-          {/* <Item
-            title="FAQ Page"
-            path="/faq"
-            colors={colors}
-            icon={<HelpOutlineOutlined />}
-          /> */}
         </Menu>
         <Typography
           variant="h6"
@@ -228,37 +176,7 @@ const SideBar = () => {
               },
             },
           }}
-        >
-          {/* <Item
-            title="Bar Chart"
-            path="/bar"
-            colors={colors}
-            icon={<BarChartOutlined />}
-          /> */}
-          {/* <Item
-            title="Pie Chart"
-            path="/pie"
-            colors={colors}
-            icon={<DonutLargeOutlined />}
-          /> */}
-          {/* <Item
-            title="Line Chart"
-            path="/line"
-            colors={colors}
-            icon={<TimelineOutlined />}
-          /> */}
-          {/* <Item
-            title="Geography Chart"
-            path="/geography"
-            colors={colors}
-            icon={<MapOutlined />}
-          /> */}
-          {/* <Item
-            title="Stream Chart"
-            path="/stream"
-            colors={colors}
-            icon={<WavesOutlined />}
-          /> */}
+        >     
         </Menu>
       </Box>
     </Sidebar>

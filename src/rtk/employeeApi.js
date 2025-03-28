@@ -39,8 +39,23 @@ export const employeeDetailApi = createApi({
             }),
             invalidatesTags:["employee"],
         }),
+
+        employeeLogin:builder.mutation({
+            query:(data)=>(
+                {
+                url:`employee/login`,
+                method:"POST",
+                data
+            }),
+            invalidatesTags:["employee"],
+        })
           
     }),
 });
 
-export const {useGetAllEmployeeQuery,useAddEmployeeMutation,useDeleteEmployeeMutation,useEmployeeEditMutation} = employeeDetailApi;
+export const {useGetAllEmployeeQuery,
+    useAddEmployeeMutation,
+    useDeleteEmployeeMutation,
+    useEmployeeEditMutation,
+    useEmployeeLoginMutation,
+} = employeeDetailApi;

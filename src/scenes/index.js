@@ -16,6 +16,7 @@ import Login from "../components/Login";
 import EmployeeAdd from "../components/EmployeeAdd";
 import TableComponent from "../helper/Tablecomponent";
 import TableData from "../scenes/team/Usetable"
+import Attendance from "../components/Attendance/Attendance";
 export {
   Navbar,
   SideBar,
@@ -34,5 +35,5 @@ export {
   Login,
   EmployeeAdd,
   TableComponent,
-  TableData
+  TableData,Attendance
 };
