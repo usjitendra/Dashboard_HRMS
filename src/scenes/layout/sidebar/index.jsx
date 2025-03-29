@@ -140,14 +140,14 @@ const SideBar = () => {
             icon={< ScheduleOutlined/>}
           />
         </Menu>
-        <Typography
+        {/* <Typography
           variant="h6"
           color={colors.gray[300]}
           sx={{ m: "15px 0 5px 20px" }}
         >
           {!collapsed ? "Pages" : " "}
-        </Typography>
-        <Menu
+        </Typography> */}
+        {/* <Menu
           menuItemStyles={{
             button: {
               ":hover": {
@@ -158,15 +158,15 @@ const SideBar = () => {
             },
           }}
         >
-        </Menu>
-        <Typography
+        </Menu> */}
+        {/* <Typography
           variant="h6"
           color={colors.gray[300]}
           sx={{ m: "15px 0 5px 20px" }}
         >
           {!collapsed ? "Charts" : " "}
-        </Typography>
-        <Menu
+        </Typography> */}
+        {/* <Menu
           menuItemStyles={{
             button: {
               ":hover": {
@@ -177,7 +177,7 @@ const SideBar = () => {
             },
           }}
         >     
-        </Menu>
+        </Menu> */}
       </Box>
     </Sidebar>
   );

@@ -46,13 +46,18 @@ const Navbar = () => {
   };
 
   const handelLogout = async() => {
-          const result=await logoutUser().unwrap()
-         console.log("logout user",result);
-        await localStorage.removeItem("authToken");
-         
-         console.log("Logout Click++==++",result)
-         navigate("/login");
+      console.log(navigate);
+      
+       const response=await logoutUser()
 
+       console.log(response);
+
+       if(response?.data){
+        console.log("chala mai");
+        
+        navigate("/login", { replace: true });
+       }
+       
   };
   return (
     <Box
@@ -81,7 +86,6 @@ const Navbar = () => {
           </IconButton>
         </Box>
       </Box>
-
       <Box>
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (

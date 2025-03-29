@@ -6,7 +6,7 @@ let isLogin=false;
 export default function AuthContent() {
      const {data,isLoading,error}=useIsLoginQuery()
 
-    //  console.log("jitendra+++",data);
+     console.log("jitendra+++",data);
 
    return data?<Outlet/>:<Navigate to="/login"/>
 

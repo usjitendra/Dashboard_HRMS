@@ -24,7 +24,7 @@ export const logiDetail = createApi({
                 method: "GET",
                 credentials: "include",
             }),
-            // providesTags: ["userLogin"],
+            providesTags: ["userLogin"],
         }),
         isLogout:builder.mutation({
             query:()=>({

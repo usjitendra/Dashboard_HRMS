@@ -37,7 +37,8 @@ const Login = () => {
     }
   };
 
-  // console.log(data);
+    
+  console.log("111111",data);
 
   useEffect(() => {
     if (data) {
