@@ -1,8 +1,8 @@
 import { padStart } from "@fullcalendar/core/internal";
 import { useEffect, useState } from "react";
-import { useIsLoginQuery, useLoginApiMutation } from "../rtk/login";
+import { useIsLoginQuery, useLoginApiMutation } from "../../rtk/login";
 import { useNavigate } from "react-router-dom";
-import { useEmployeeLoginMutation } from "../rtk/employeeApi";
+import { useEmployeeLoginMutation } from "../../rtk/employeeApi";
 const Login = () => {
   const [email, setEmail] = useState("codecrafter@gmail.com");
   const [password, setPassword] = useState("Cc@12345c");
@@ -46,7 +46,7 @@ const Login = () => {
   }, [data]);
 
   return (
-    <section className="bg-gray-50 dark:bg-gray-900">
+    <section className="bg-blue-500 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a
           href="#"
@@ -54,7 +54,7 @@ const Login = () => {
         >
           <img
             className="w-60 h-60r-2 object-contain"
-            src="https://codecrafter.co.in/assets/logo-DaK6eKX-.png"
+            src="https://drmanasaggarwal.com/assets/cclogo-l-lAMUu5.png"
             alt="logo"
           />
           {/* Code Crafter Web Solution */}

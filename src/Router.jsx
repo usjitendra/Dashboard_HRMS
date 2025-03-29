@@ -6,7 +6,8 @@ import {
   Login,
   EmployeeAdd,
   TableData,
-  Attendance
+  Attendance,
+  EmployeeView
 } from "./scenes";
 import AuthContent from "./auth/AuthContent";
 
@@ -21,6 +22,7 @@ const AppRouter = () => {
             <Route path="/team" element={<TableData />} />
             <Route path="/employee" element={<EmployeeAdd />} />
             <Route path='/attendence' element={<Attendance/>}></Route>
+            <Route path='/view/employee' element={<EmployeeView/>}></Route>
           </Route>
         </Route>
       </Routes>

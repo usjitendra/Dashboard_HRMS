@@ -21,8 +21,17 @@ export const attendanceDetailApi = createApi({
       }),
       invalidatesTags: ["attendance"],
     }),
+    employeeAllDetail:builder.mutation({
+        query:(id)=>(
+            console.log("rtk+++",id),
+ 
+          {
+          url:`employee/attendance/all/detail/${id}`,
+          method: "GET",
+        })
+    })
   }),
 });
 
-export const { useEmployeeCheckInMutation, useEmployeeChekOutMutation } =
+export const { useEmployeeCheckInMutation, useEmployeeChekOutMutation,useEmployeeAllDetailMutation } =
   attendanceDetailApi;

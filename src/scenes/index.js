@@ -12,11 +12,12 @@ import Pie from "./pie";
 import Stream from "./stream";
 import FAQ from "./faq";
 import Geography from "./geography";
-import Login from "../components/Login";
+import Login from "../components/Login/Login";
 import EmployeeAdd from "../components/EmployeeAdd";
 import TableComponent from "../helper/Tablecomponent";
 import TableData from "../scenes/team/Usetable"
 import Attendance from "../components/Attendance/Attendance";
+import EmployeeView from "../components/EmployeeView/EmployeeView"
 export {
   Navbar,
   SideBar,
@@ -35,5 +36,6 @@ export {
   Login,
   EmployeeAdd,
   TableComponent,
-  TableData,Attendance
+  TableData,Attendance,
+  EmployeeView
 };
